@@ -1,0 +1,19 @@
+{
+  "name": "phantompdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sathwik77",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "html-pdf": "^2.2.0",
+    "nodemon": "^1.14.12",
+    "phantom": "^4.0.12"
+  }
+}

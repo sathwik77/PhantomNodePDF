@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            
+            
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class = "container">
+        <div class="row">
+                    
+                      
+            <div class="col-xs-6">
+                <h3>Visits By Day</h3>
+                <p>To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there.
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer.</p>
+            </div>
+
+            <div class ="col-xs-6">  
+         
+                <canvas id="myCanvas" width="360" height="360" style="border:1px solid #d3d3d3;">
+                                Your browser does not support the HTML5 canvas tag.
+               </canvas>
+                            
+                <script type="text/javascript">
+                            //CANVAS
+                                var X = 180;
+                                var Y = 180;
+                                var outterRadius = 150;
+                                var innerRadius = 90;
+
+                                var c = document.getElementById("myCanvas");
+                                
+                                var context = c.getContext("2d");
+                                    
+                                
+                                setRadialGradient("#DADADA", "#DADADA");
+                                drawDonut(Math.PI*0.75 , Math.PI* 1.25);
+                                
+                                setRadialGradient("#A4A4A4", "#A4A4A4");
+                                drawDonut(Math.PI * 1.25, Math.PI*1.75);
+                                
+                                
+                                setRadialGradient("#7B7B7B", "#7B7B7B");
+                                drawDonut(Math.PI*1.75, Math.PI*0.25);
+                                
+                            
+                                function drawDonut(sRadian, eRadian){
+                                    
+                                    context.beginPath();
+                                        context.arc(X, Y, outterRadius, sRadian, eRadian, false); // Outer: CCW
+                                        context.arc(X, Y, innerRadius, eRadian, sRadian, true); // Inner: CW
+                                    context.closePath();
+                                    
+                                                    
+                                    context.fill();
+                                }
+                                
+                                function setRadialGradient(sgc, bgc){
+                                    var grd = context.createRadialGradient(X, Y, innerRadius + 5, X, Y, outterRadius);
+                                    grd.addColorStop(0,sgc);
+                                    grd.addColorStop(1,bgc);
+                                    context.fillStyle = grd;
+                                }
+
+                                //CANVAS2
+                                var X = 180;
+                                var Y = 180;
+                                var outterRadius = 130;
+                                var innerRadius = 110;
+                                    
+                                
+                                setRadialGradient("#ff3c3c", "#ff3c3c");
+                                drawDonut(Math.PI*0.75, Math.PI*(0.75+(0.0154*20)));
+                                
+                            
+                                function drawDonut(sRadian, eRadian){
+                                    
+                                    context.beginPath();
+                                        context.arc(X, Y, outterRadius, sRadian, eRadian, false); // Outer: CCW
+                                        context.arc(X, Y, innerRadius, eRadian, sRadian, true); // Inner: CW
+                                    context.closePath();
+                                    
+                                                    
+                                    context.fill();
+                                }
+                                
+                                function setRadialGradient(sgc, bgc){
+                                    var grd = context.createRadialGradient(X, Y, innerRadius + 5, X, Y, outterRadius);
+                                    grd.addColorStop(0,sgc);
+                                    grd.addColorStop(1,bgc);
+                                    context.fillStyle = grd;
+                                }
+                            
+
+                </script>
+
+                            <!-- <div id="canvasImage">
+                                <script>
+                                    var img = new Image();
+                                    var can = document.getElementById('myCanvas');
+                                    img.src = can.toDataURL();
+                                    //return img;
+                                    document.body.appendChild(img);   
+                                </script>
+                            </div> -->
+            </div>
+        </div>
+        <div class="row">
+                    
+                      
+                <div class="col-xs-6">
+                    <h3>Visits By Day</h3>
+                    <p>To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there.
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer.</p>
+                </div>
+                <div class="col-xs-6">
+                        <h3>Visits By Day</h3>
+                        <p>To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                                local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there.
+                                To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                                local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                                To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                                local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                                To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                                local computer.</p>
+                    </div>
+        
+    
+    </div>
+    <div class="row">
+                    
+                      
+            <div class="col-xs-6">
+                <h3>Visits By Day</h3>
+                <p>To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there.
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer.</p>
+            </div>
+            <div class="col-xs-6">
+                    <h3>Visits By Day</h3>
+                    <p>To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there.
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer.</p>
+                </div>
+    
+
+    </div>
+    <div class="row">
+                    
+                      
+            <div class="col-xs-6">
+                <h3>Visits By Day</h3>
+                <p>To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there.
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                        To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                        local computer.</p>
+            </div>
+            <div class="col-xs-6">
+                    <h3>Visits By Day</h3>
+                    <p>To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there.
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer. Alternatively, we could also open up a new browser window with the image data url directly and the user could save it from there
+                            To save the canvas drawing as an image, we can set the source of an image object to the image data URL. From there, a user can right click on the image to save it to their 
+                            local computer.</p>
+                </div>
+    
+
+    </div>
+                   
+
+    </body>
+</html>
